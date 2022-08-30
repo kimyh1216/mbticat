@@ -7,9 +7,9 @@ const KakaoShareButton = () =>{
     const resultUrl = window.location.href;
     console.log('aaa',resultUrl,url)
     React.useEffect(()=>{
-        Kakao.cleanUp()
+        Kakao.cleanup()
         Kakao.init("42fd553cf3e2d920a69d2a95f3371604")
-        console.log(Kakao.IsInitialized)
+        console.log(Kakao.isInitialized)
     },[])
     const shareKakao = () =>{
     Kakao.Share.sendDefault({
@@ -34,6 +34,6 @@ const KakaoShareButton = () =>{
         ]
       });
     }
-      return(<Button style={{marginLeft:10}}>카카오톡 공유하기</Button>)
+      return(<Button onClick={shareKakao} style={{marginLeft:10}}>카카오톡 공유하기</Button>)
 }
 export default KakaoShareButton
