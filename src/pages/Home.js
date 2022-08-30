@@ -3,7 +3,8 @@ import React from "react";
 import '../App.css'
 import styled from 'styled-components'
 import catImage from '../asset/cat_image.jpg'
-import Button from 'react-bootstrap/Button'
+//import Button from 'react-bootstrap/Button'
+import {Button} from '@mui/material';
 import { useNavigate } from "react-router-dom";
 
 const Home = () =>{
@@ -22,7 +23,7 @@ const Home = () =>{
             <img src={catImage} className="rounded-circle" width={350} height={350} alt="cat image" />
         </LogoImage>
         <Desc>MBTI를 기반으로하는 나랑 잘맞는 고양이 찾기</Desc>
-        <Button onClick={handleClickButton}>테스트 시작하기</Button>
+        <Button variant="contained" color="error" onClick={handleClickButton}>테스트 시작하기</Button>
     </Wrapper>
     )
 }
